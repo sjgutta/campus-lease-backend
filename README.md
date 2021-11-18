@@ -1,2 +1,6 @@
-# campus-lease-backend
-This is the backend web server for CampusLease. This is a DSO 462 project by Sajan Gutta and Max Friedman. The backend is built using Flask and MySQL.
+# CampusLease Backend
+This repository contains the backend that connects to the CampusLease database. 
+It contains models for each table and an API for submissions and fetching listings.
+
+## Steps
+This is a backend created for Sajan Gutta and Max Friedman's DSO 462 project.
