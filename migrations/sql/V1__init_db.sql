@@ -1,0 +1,20 @@
+CREATE TABLE listing (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(255),
+    last_name VARCHAR(255),
+    picture_url VARCHAR(255),
+    email VARCHAR(255) NOT NULL,
+    phone_number VARCHAR(20),
+    title VARCHAR(255),
+    bio TEXT,
+    initiative VARCHAR(64),
+    division VARCHAR(64),
+    major VARCHAR(255),
+    minor VARCHAR(255),
+    usc_school VARCHAR(64),
+    linkedin_url VARCHAR(255),
+    instagram_url VARCHAR(255),
+    relevant_links VARCHAR(255),
+    birthday DATE,
+    status VARCHAR(64)
+);

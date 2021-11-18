@@ -1,0 +1,3 @@
+flyway.url=jdbc:mysql://localhost/campus_lease_test?allowPublicKeyRetrieval=true
+flyway.user=root
+flyway.password=let_me_in
