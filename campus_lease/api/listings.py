@@ -7,7 +7,7 @@ listings_bp = Blueprint('api', __name__)
 # Returns list of all startups
 @listings_bp.route('/listings/submit', methods=['POST'])
 def add_listing():
-    data = request.form
+    data = request.get_json()
 
     name = data.get("name")
     address = data.get("address")
@@ -25,8 +25,9 @@ def add_listing():
         if not attribute:
             return {"error": "missing a field!"}
 
-    Listing.create(name=name, address=address, city=city, state=state, zip_code=zip_code, image_url=image_url,
+    listing = Listing.create(name=name, address=address, city=city, state=state, zip_code=zip_code, image_url=image_url,
                    email=email, description=description, amenities=amenities)
+    listing.save()
 
     return {"success": f"Create listing with name {name}!"}
 

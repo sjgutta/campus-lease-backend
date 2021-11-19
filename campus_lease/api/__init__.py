@@ -1,4 +1,5 @@
 # from flask import request, abort
+from flask_cors import CORS
 from campus_lease import factory
 
 
@@ -15,6 +16,7 @@ def register_blueprints(app):
 
 def create_app(testing=False):
     api_app = factory.create_app(template_folder="templates/api", testing=testing)
+    cors = CORS(api_app, resources={r"*": {"origins": "*"}})
 
     register_blueprints(api_app)
 

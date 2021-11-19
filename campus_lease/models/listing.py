@@ -13,7 +13,6 @@ class Listing(BaseModel):
     description = TextField(null=True)
     amenities = TextField(null=True)
 
-    @property
     def to_json(self):
         return {
             "name": self.name,
@@ -21,7 +20,8 @@ class Listing(BaseModel):
             "city": self.city,
             "state": self.state,
             "zip_code": self.zip_code,
-            "image_url": self.email,
+            "image_url": self.image_url,
+            "email": self.email,
             "description": self.description,
             "amenities": self.amenities
         }
